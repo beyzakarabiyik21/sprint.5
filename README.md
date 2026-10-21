@@ -1,5 +1,8 @@
-# React + TypeScript + Vite
-sprint5-p6ry.vercel.app
+# Kampüs Etkinlikleri — Sprint 5
+
+**Canlı site:** [https://sprint5-p6ry.vercel.app](https://sprint5-p6ry.vercel.app)
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
