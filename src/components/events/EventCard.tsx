@@ -9,7 +9,7 @@ interface EventCardProps {
 function EventCard({ event, onShowDetail }: EventCardProps) {
   return (
     <article className="kart">
-      <h3>{event.title}</h3>
+      <h2>{event.title}</h2>
       <p className="kategori-etiket">{event.category}</p>
       <p>Tarih: {formatDate(event.date)}, {event.time}</p>
       <p>Yer: {event.location}</p>

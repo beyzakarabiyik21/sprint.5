@@ -104,7 +104,8 @@ article.kart img {
   margin-bottom: 0.5rem;
 }
 
-article.kart h3 {
+article.kart h2 {
+  font-size: 1.17em;
   margin-top: 0;
   margin-bottom: 0.5rem;
   color: #111;

@@ -62,14 +62,7 @@ function App() {
             <h2>Yaklaşan 2 Etkinlik</h2>
             <EventList events={upcoming} onShowDetail={(id) => go("detail", id)} />
             <div style={{ marginTop: "1.5rem" }}>
-              <a
-                href="#"
-                className="buton"
-                onClick={(e) => {
-                  e.preventDefault();
-                  go("events");
-                }}
-              >
+              <a href="#" className="buton" onClick={(e) => { e.preventDefault(); go("events"); }}>
                 Tüm etkinlikleri gör
               </a>
             </div>
@@ -87,10 +80,6 @@ function App() {
               onCategoryChange={setCategory}
             />
 
-            {filteredEvents.length > 0 && (
-              <p id="sonuc">{filteredEvents.length} etkinlik listeleniyor.</p>
-            )}
-
             <EventList
               events={filteredEvents}
               onShowDetail={(id) => go("detail", id)}
@@ -106,19 +95,6 @@ function App() {
             onBack={() => go("events")}
             onEdit={(id) => go("update", id)}
           />
-        )}
-
-        {page === "detail" && !selected && (
-          <div className="hata-kutusu">
-            <p>Etkinlik bulunamadı.</p>
-            <a
-              href="#"
-              className="buton"
-              onClick={(e) => { e.preventDefault(); go("events"); }}
-            >
-              Listeye dön
-            </a>
-          </div>
         )}
 
         {/* EKLE / GÜNCELLE SAYFASI */}
