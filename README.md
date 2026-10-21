@@ -2,6 +2,8 @@
 
 **Canlı site:** [https://sprint-5-tau.vercel.app](https://sprint-5-tau.vercel.app)
 
+**Deployment:** [https://sprint-5-8qidvxj5d-beyza13.vercel.app](https://sprint-5-8qidvxj5d-beyza13.vercel.app)
+
 
 ## React + TypeScript + Vite
 
