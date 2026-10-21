@@ -1,7 +1,7 @@
 /* Beyza Karabiyik — 2416501003 */
 :root {
   --no: 2416501003;
-  --ton: 305; /* 2416501003 mod 360 */
+  --ton: 130; /* yeşil (2416501003 mod 360 = 305 idi) */
   --renk-ana: hsl(var(--ton) 65% 38%);
   --renk-zemin: hsl(var(--ton) 30% 97%);
   --font: "Trebuchet MS", serif;
@@ -27,13 +27,18 @@ body {
 header {
   background-color: var(--renk-ana);
   color: #fff;
-  padding: 1.2rem 1.5rem;
-  margin-bottom: var(--bosluk-m);
+  padding: 1.2rem 1.5rem 0.5rem;
 }
 
 header h1 {
   margin: 0 0 0.5rem 0;
   color: #fff;
+}
+
+nav {
+  background-color: var(--renk-ana);
+  padding: 0.3rem 1.5rem 1rem;
+  margin-bottom: var(--bosluk-m);
 }
 
 nav a {
@@ -45,9 +50,13 @@ nav a {
   border-radius: var(--kose);
 }
 
-nav a:hover,
-nav a.aktif {
+nav a:hover {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav a.aktif {
+  background-color: #fff;
+  color: var(--renk-ana);
 }
 
 main {
@@ -143,7 +152,8 @@ form.filtre {
   }
 }
 
-#sonuc {
+#sonuc,
+.sonuc {
   font-weight: bold;
   margin-bottom: var(--bosluk-m);
 }
@@ -295,7 +305,7 @@ textarea[aria-invalid="true"] {
 }
 
 .buton.ikincil {
-  background-color: #666;
+  background-color: hsl(var(--ton) 25% 45%);
 }
 
 .buton:hover {
@@ -324,23 +334,4 @@ article.kart img.kart-gorsel,
   object-fit: cover;
   border-radius: var(--kose);
   display: block;
-}
-/* Üst mor başlık alanını yeşil yapar */
-header, .header, nav, .navbar {
-    background-color: #2e7d32 !important;
-}
-/* Mor 'Bu etkinliği güncelle' butonunu yeşil yapar */
-button, .btn-primary, input[type="submit"] {
-    background-color: #2e7d32 !important;
-}
-
-/* 1. Kartların üst/etrafındaki mor kenarlıklar */
-.card, .event-card, [class*="card"] {
-    border-color: #2e7d32 !important;
-    border-top-color: #2e7d32 !important;
-}
-
-/* 2. Kategori türü yazıları (Seminer, Atölye, Söyleşi vb.) */
-.category, .badge, .event-type, span {
-    color: #2e7d32 !important;
 }
