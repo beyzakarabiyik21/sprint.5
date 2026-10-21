@@ -1,6 +1,6 @@
 # Kampüs Etkinlikleri — Sprint 5
 
-**Canlı site:** [https://sprint5-p6ry.vercel.app](https://sprint5-p6ry.vercel.app)
+**Canlı site:** [https://sprint-5-tau.vercel.app](https://sprint-5-tau.vercel.app)
 
 
 ## React + TypeScript + Vite
