@@ -5,7 +5,7 @@ interface EventFormProps {
 function EventForm({ onSubmit }: EventFormProps) {
   return (
     <>
-      <p className="bilgi">Tüm alanları doldurup Kaydet'e basın.</p>
+      <p className="bilgi">Bu sprintte form sadece görünüm; kayıt yapılmaz.</p>
       <form
         className="form"
         onSubmit={(e) => {

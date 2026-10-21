@@ -21,14 +21,24 @@ function App() {
 
   const selected = selectedId ? findEventById(events, selectedId) : undefined;
 
-  let pageTitle = "Ana Sayfa";
-  if (page === "events") pageTitle = "Etkinlikler";
-  else if (page === "add") pageTitle = "Ekle";
-  else if (page === "update") pageTitle = "Etkinlik Güncelle";
-  else if (page === "detail" && selected) pageTitle = selected.title;
+  let pageTitle = "Kampüs Etkinlikleri";
+  let pageText: string | undefined = "Fakültedeki seminer, atölye ve söyleşileri tek yerden takip edin.";
+  if (page === "events") {
+    pageTitle = "Tüm Etkinlikler";
+    pageText = "Ekim ayında kampüste düzenlenen etkinlikler.";
+  } else if (page === "add") {
+    pageTitle = "Etkinlik Ekle";
+    pageText = undefined;
+  } else if (page === "update") {
+    pageTitle = "Etkinlik Güncelle";
+    pageText = undefined;
+  } else if (page === "detail") {
+    pageTitle = selected ? selected.title : "Etkinlik Detayı";
+    pageText = undefined;
+  }
 
   useEffect(() => {
-    document.title = `Kampüs Etkinlikleri — ${pageTitle}`;
+    document.title = page === "home" ? pageTitle : `Kampüs Etkinlikleri — ${pageTitle}`;
   }, [pageTitle]);
 
   function go(next: PageName, id: string | null = null) {
@@ -49,10 +59,7 @@ function App() {
 
   return (
     <>
-      <Header
-        title={pageTitle}
-        text={page === "home" ? "Fakültedeki seminer, atölye ve söyleşileri tek yerden takip edin." : undefined}
-      />
+      <Header title={pageTitle} text={pageText} />
       <Navigation current={page} onNavigate={go} />
 
       <main>
@@ -80,6 +87,10 @@ function App() {
               onCategoryChange={setCategory}
             />
 
+            {filteredEvents.length > 0 && (
+              <p id="sonuc">{filteredEvents.length} etkinlik listeleniyor.</p>
+            )}
+
             <EventList
               events={filteredEvents}
               onShowDetail={(id) => go("detail", id)}
@@ -99,10 +110,7 @@ function App() {
 
         {/* EKLE / GÜNCELLE SAYFASI */}
         {(page === "add" || page === "update") && (
-          <div>
-            <h2>{page === "add" ? "Etkinlik Ekle" : "Etkinlik Güncelle"}</h2>
-            <EventForm onSubmit={() => window.scrollTo(0, 0)} />
-          </div>
+          <EventForm onSubmit={() => window.scrollTo(0, 0)} />
         )}
       </main>
 

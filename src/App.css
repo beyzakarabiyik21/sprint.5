@@ -156,6 +156,7 @@ form.filtre {
 #sonuc,
 .sonuc {
   font-weight: bold;
+  color: var(--renk-ana);
   margin-bottom: var(--bosluk-m);
 }
 
