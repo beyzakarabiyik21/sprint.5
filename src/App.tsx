@@ -38,8 +38,8 @@ function App() {
   }
 
   useEffect(() => {
-    document.title = page === "home" ? pageTitle : `Kampüs Etkinlikleri — ${pageTitle}`;
-  }, [pageTitle]);
+    document.title = page === "home" ? "Kampüs Etkinlikleri — Ana Sayfa" : `Kampüs Etkinlikleri — ${pageTitle}`;
+  }, [page, pageTitle]);
 
   function go(next: PageName, id: string | null = null) {
     setPage(next);
